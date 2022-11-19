@@ -1,3 +1,6 @@
+import re
+
+
 def check_type(el):
     if isinstance(el, int):
         return "int"
@@ -18,7 +21,9 @@ def check_type_required(block, rules, output):
 
 
 def check_format(block, rules, output):
-    pass
+    for out_key in list(output):
+        if re.match(rules.get(out_key), block.get(out_key)) is None:
+            output[out_key] += 1
 
 
 def count_errors(output):

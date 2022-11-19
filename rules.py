@@ -8,7 +8,7 @@ rules_type_required = {
 }
 
 rules_format = {
-    "stop_name": "([A-Z]+\w*)(Road|Avenue|Boulevard|Street)",
-    "stop_type": [b'S', b'O', b'F', b''],
-    "a_time": ""
+    "stop_name": "([A-Z]+\w*\s?)+(Road|Avenue|Boulevard|Street)$",
+    "stop_type": "^(S|O|F){0,1}$",
+    "a_time": "^([012]\d)\:([0-5]\d)$"
 }
