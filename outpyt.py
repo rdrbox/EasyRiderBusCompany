@@ -13,3 +13,5 @@ output_format = {
     "a_time": 0
 }
 
+output_line_number_stops = {}
+
